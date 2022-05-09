@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "baseUrl": "." , //for dynamic path on import js modules
+        "paths" : {
+            "@myproject/components/*" : ["components/*"],
+            "@myproject/pages/*" : ["pages/*"],
+            "@myproject/public/*" : ["public/*"],
+            "@myproject/styles/*" : ["styles/*"],
+            "@myproject/configs/*" : ["configs/*"],
+            "@myproject/utils/*" : ["utils/*"],
+        }
+    }
+}

@@ -1,0 +1,205 @@
+:root { 
+  --bs-primary: #ffc800;
+  --bs-primary-2:#FFEF82;
+  --bs-primary-3:#82954B;
+  --bs-primaryHover: #cca000; 
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-body-font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+  --bs-body-color: #212529;
+  --bs-body-bg: #fff;
+
+  --btn-login-color:var(--bs-primary);
+  --btn-login-color-1:var(--bs-primary-2); 
+  --btn-login-color-2:var(--bs-primaryHover);
+
+}
+
+body {
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: var(--bs-body-bg);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+  color: var(--bs-primary);
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--bs-primary-hover); 
+  }
+
+  &:not([href]):not([class]), &:not([href]):not([class]):hover {
+    color: inherit;
+    text-decoration: none;
+  }
+} 
+
+.primary-color {
+  color: var(--bs-primary)
+}
+
+.primary-3-color {
+  color: var(--bs-primary-3)
+}
+ 
+.btn-primary {
+  --bs-text-opacity: 1;
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+
+  &:hover {
+    --bs-text-opacity: 1;
+    background-color: var(--bs-primaryHover);
+    border-color: var(--bs-primaryHover); 
+  }
+}
+
+/*=======================================
+ * NAVBAR
+ *=======================================
+ */
+.navbar {
+  text-align: center;
+  
+  .navbar-color {
+    background-color: var(--bs-white);
+  }
+  
+  .navbar-toggler {
+    background-color: var(--bs-primary);
+    color: rgba(255, 255, 255, 0.55);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  .nav-item {
+    margin-top: 3px;
+  }
+  
+  .nav-link {
+    color:var(--bs-black);
+  }
+
+  .nav-link:hover {
+    color:var(--bs-primary);
+  }
+  
+  a.btn-on-hover:hover {
+      background-color: var(--btn-login-color-2);
+      color: var(--btn-login-color);
+      border-color: var(--btn-login-color-2);
+  }
+  
+  .btn-fill {
+      background-color: var(--btn-login-color);
+      color: var(--btn-login-color-1);
+      border-color: var(--btn-login-color); 
+  }
+
+  .btn-outline {
+      color: var(--btn-login-color);
+      border-color: var(--btn-login-color); 
+
+  }
+}
+ 
+
+/*=======================================
+ * CHECKBOX 
+ *=======================================
+ */
+
+$chk_black: #363839;
+$chk_gray: #bdc1c6;
+$chk_white: #fff;
+   
+.newspaper-checkbox {
+  position: relative; 
+  width: 1.5em;
+  height: 1.5em;
+  color: $chk_black;
+  border: 1px solid $chk_gray;
+  border-radius: 4px;
+  appearance: none;
+  outline: 0;
+  cursor: pointer;
+  &::before {
+    position: absolute;
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    display: block;
+    top: .5px;
+    left: 5px;
+    width: 10px;
+    height: 10px; 
+    opacity: 0;
+  }
+  &:checked {
+    color: $chk_white;
+    border-color: var(--bs-primary-3);
+    background: var(--bs-primary-3);
+    &::before {
+      opacity: 1;
+    }
+    ~ label::before {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); 
+    }
+  }
+}
+/*=======================================
+ * CHECKBOX 
+ *=======================================
+ */
+.icon-container { 
+  float: left;
+  width: 2em; 
+  height: 2em;
+  padding: 0;
+}
+[class*="eicon-"] {
+  display: block;
+  background-repeat: no-repeat;
+}
+[class*="eicon-"]:before {
+  content: '';
+  display: block;
+  width: 2em;
+  height: 2em;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-background-size: contain;
+}
+
+.eicon-facebook {    
+   background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="30px" height="30px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="%2382954B" fill-rule="evenodd" d="M0 12.067C0 18.033 4.333 22.994 10 24v-8.667H7V12h3V9.333c0-3 1.933-4.666 4.667-4.666c.866 0 1.8.133 2.666.266V8H15.8c-1.467 0-1.8.733-1.8 1.667V12h3.2l-.533 3.333H14V24c5.667-1.006 10-5.966 10-11.933C24 5.43 18.6 0 12 0S0 5.43 0 12.067Z" clip-rule="evenodd"%2F%3E%3C%2Fsvg%3E');
+}
+
+.eicon-twitter {    
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="33px" height="33px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"%3E%3Cpath fill="%2382954B" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64zm215.3 337.7c.3 4.7.3 9.6.3 14.4c0 146.8-111.8 315.9-316.1 315.9c-63 0-121.4-18.3-170.6-49.8c9 1 17.6 1.4 26.8 1.4c52 0 99.8-17.6 137.9-47.4c-48.8-1-89.8-33-103.8-77c17.1 2.5 32.5 2.5 50.1-2a111 111 0 0 1-88.9-109v-1.4c14.7 8.3 32 13.4 50.1 14.1a111.13 111.13 0 0 1-49.5-92.4c0-20.7 5.4-39.6 15.1-56a315.28 315.28 0 0 0 229 116.1C492 353.1 548.4 292 616.2 292c32 0 60.8 13.4 81.1 35c25.1-4.7 49.1-14.1 70.5-26.7c-8.3 25.7-25.7 47.4-48.8 61.1c22.4-2.4 44-8.6 64-17.3c-15.1 22.2-34 41.9-55.7 57.6z"%2F%3E%3C%2Fsvg%3E');
+}
+
+.eicon-linkedin {    
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="33px" height="33px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"%3E%3Cpath fill="%2382954B" d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4zM7.65 13.979H5.706V7.723H7.65v6.256zm-.984-7.024c-.614 0-1.011-.435-1.011-.973c0-.549.409-.971 1.036-.971s1.011.422 1.023.971c0 .538-.396.973-1.048.973zm8.084 7.024h-1.944v-3.467c0-.807-.282-1.355-.985-1.355c-.537 0-.856.371-.997.728c-.052.127-.065.307-.065.486v3.607H8.814v-4.26c0-.781-.025-1.434-.051-1.996h1.689l.089.869h.039c.256-.408.883-1.01 1.932-1.01c1.279 0 2.238.857 2.238 2.699v3.699z"%2F%3E%3C%2Fsvg%3E');
+}
+
+.teamMember-img {
+  width: 14rem;
+  height: 14rem;
+  border: 0.5rem solid rgba(0, 0, 0, 0.1);
+}
