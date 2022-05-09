@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "baseUrl": "." , //for dynamic path on import js modules
+        "paths" : {
+            "@myproject/configs/*" : ["configs/*"],
+            "@myproject/controllers/*" : ["controllers/*"],
+            "@myproject/middlewares/*" : ["middlewares/*"],
+            "@myproject/models/*" : ["models/*"],
+            "@myproject/routes/*" : ["routes/*"],
+            "@myproject/test/*" : ["test/*"],
+            "@myproject/utils/*" : ["utils/*"],
+            "@myproject/validators/*" : ["validators/*"],
+            "@myproject/listAPI" : ["listAPI"],
+        }
+    }
+}
